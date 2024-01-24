@@ -6,12 +6,12 @@
   "output_dir": "./tmp/vits_finetuned_ind",
 
   "dataset_name": "dhavalgala/mozilla-ind",    
-  "dataset_config_name": "male", 
-  "audio_column_name": "default", 
-  "text_column_name":"sentence",
+  "dataset_config_name": "default", 
+  "audio_column_name": "audio", 
+  "text_column_name":"text",
   "train_split_name": "train",
   "eval_split_name": "train",
-  "speaker_id_column_name": "client_id",
+  "speaker_id_column_name": "speaker_id",
   "override_speaker_embeddings": true,
   
   "max_duration_in_seconds": 20,
@@ -47,6 +47,6 @@
   "weight_duration": 1,
   "weight_mel": 35,
 
-  "fp16": true,
+  "fp16": false,
   "seed": 456
 }

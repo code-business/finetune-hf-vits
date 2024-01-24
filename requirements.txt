@@ -5,3 +5,5 @@ matplotlib
 wandb
 tensorboard
 Cython
+pandas
+pyarrow
