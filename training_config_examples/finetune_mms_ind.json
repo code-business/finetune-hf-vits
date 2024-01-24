@@ -21,7 +21,7 @@
   "model_name_or_path": "dhavalgala/mms-tts-ind-train",
 
 
-  "preprocessing_num_workers": 4,
+  "preprocessing_num_workers": 1,
 
   "do_train": true,
   "num_train_epochs": 200,
@@ -47,6 +47,6 @@
   "weight_duration": 1,
   "weight_mel": 35,
 
-  "fp16": false,
+  "fp16": true,
   "seed": 456
 }
