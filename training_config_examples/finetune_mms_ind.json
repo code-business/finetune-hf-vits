@@ -21,7 +21,7 @@
   "model_name_or_path": "dhavalgala/mms-tts-ind-train",
 
 
-  "preprocessing_num_workers": 1,
+  "preprocessing_num_workers": 4,
 
   "do_train": true,
   "num_train_epochs": 200,
