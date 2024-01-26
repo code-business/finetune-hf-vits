@@ -11,20 +11,20 @@
   "text_column_name":"text",
   "train_split_name": "train",
   "eval_split_name": "train",
-  "speaker_id_column_name": "speaker_id",
-  "override_speaker_embeddings": true,
-  
+
+  "full_generation_sample_text": "Dia sepertinya berusaha berpura-pura baik-baik saja.",
+
   "max_duration_in_seconds": 20,
   "min_duration_in_seconds": 1.0,
   "max_tokens_length": 500,
 
   "model_name_or_path": "dhavalgala/mms-tts-ind-train",
 
-
   "preprocessing_num_workers": 4,
 
   "do_train": true,
   "num_train_epochs": 200,
+  "max_train_samples": 150,
   "gradient_accumulation_steps": 1,
   "gradient_checkpointing": false,
   "per_device_train_batch_size": 16,
@@ -34,10 +34,10 @@
   "warmup_ratio": 0.01,
   "group_by_length": false,
 
-  "do_eval": true, 
+  "do_eval": true,
   "eval_steps": 50,
   "per_device_eval_batch_size": 16,
-  "max_eval_samples": 25, 
+  "max_eval_samples": 25,
   "do_step_schedule_per_epoch": true,
 
   "weight_disc": 3,
