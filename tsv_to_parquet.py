@@ -3,8 +3,9 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from datasets import Dataset, Audio
 
-csv_file = '/home/dhaval/Downloads/cv-corpus-16.1-2023-12-06-id/cv-corpus-16.1-2023-12-06/id/train.tsv'
-parquet_file = './my.parquet'
+base_path = '/home/dhaval/Downloads/cv-corpus-16.1-2023-12-06-mr/cv-corpus-16.1-2023-12-06'
+lang = 'mr'
+csv_file = f'{base_path}/{lang}/train.tsv'
 
 audio_paths = []
 text_arr = []
@@ -13,7 +14,8 @@ speaker_ids = []
 df = pd.read_csv(csv_file, sep='\t')
 df = df.reset_index()
 for index, row in df.iterrows():
-    audio_paths.append(f"/home/dhaval/Downloads/cv-corpus-16.1-2023-12-06-id/cv-corpus-16.1-2023-12-06/id/clips/{row['path']}")
+    # if index >= 128 and index < 256:
+    audio_paths.append(f"{base_path}/{lang}/clips/{row['path']}")
     text_arr.append(row["sentence"])
     speaker_ids.append(row["client_id"])
 
@@ -23,7 +25,7 @@ audio_dataset = Dataset.from_dict({
     "speaker_id": speaker_ids
 }).cast_column("audio", Audio())
 
-audio_dataset.push_to_hub("dhavalgala/mozilla-ind")
+audio_dataset.push_to_hub("dhavalgala/mozilla-mar")
 # print(audio_paths)
 
 # for i, chunk in enumerate(csv_stream):
