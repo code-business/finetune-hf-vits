@@ -23,7 +23,7 @@
   "preprocessing_num_workers": 4,
 
   "do_train": true,
-  "num_train_epochs": 200,
+  "num_train_epochs": 1500,
   "max_train_samples": 150,
   "gradient_accumulation_steps": 1,
   "gradient_checkpointing": false,
