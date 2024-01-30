@@ -5,14 +5,14 @@
   "overwrite_output_dir": true,
   "output_dir": "./tmp/vits_finetuned_mar",
 
-  "dataset_name": "dhavalgala/mozilla-mar",    
+  "dataset_name": "dhavalgala/openslr-mar",    
   "dataset_config_name": "default", 
   "audio_column_name": "audio", 
   "text_column_name":"text",
   "train_split_name": "train",
   "eval_split_name": "train",
 
-  "full_generation_sample_text": "आईचे आजारपण वाढत चालले, तसतशी मथीही नीट खातपीतनाशी झाली.",
+  "full_generation_sample_text": "एक बस चार तासांपूर्वी येऊन गेली आणि पुढची बस यायला अजून फक्त पंचावन्न मिनिटं आहेत",
 
   "max_duration_in_seconds": 20,
   "min_duration_in_seconds": 1.0,
@@ -27,7 +27,7 @@
   "max_train_samples": 150,
   "gradient_accumulation_steps": 1,
   "gradient_checkpointing": false,
-  "per_device_train_batch_size": 16,
+  "per_device_train_batch_size": 32,
   "learning_rate": 2e-5,
   "adam_beta1": 0.8,
   "adam_beta2": 0.99,
@@ -36,7 +36,7 @@
 
   "do_eval": true,
   "eval_steps": 50,
-  "per_device_eval_batch_size": 16,
+  "per_device_eval_batch_size": 32,
   "max_eval_samples": 25,
   "do_step_schedule_per_epoch": true,
 
